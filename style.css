@@ -33,7 +33,6 @@ display: flex;
 align-items: center;
 justify-content: space-around;
 color: white;
-padding-top:25px;
 margin-bottom: 50px;
 
 }
@@ -73,17 +72,21 @@ header.index_header{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 120vh;
+    height: min-content;
+    padding: 50px 0;
+
 }
-header.index_header div{
-    width: 80%;
+header.index_header div.header_index_bottom_half{
+    width: 100%;
     padding: 0 50px;
     color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
-header.index_header div div:nth-child(1){
+header.index_header div.header_index_bottom_half div#index_heading_text{
     font-size: 3.5rem;
     font-family: var(--secondary-font);
-
 }
 hr{
     border: 5px solid;
@@ -117,7 +120,19 @@ div.buttons button:nth-child(1){
 div.buttons button:nth-child(2){
     background-color: var(--red-shade);
 }
-
+div.forward_arrow{
+    grid-column: 5 / 6;
+    cursor: pointer;
+}
+div.back_arrow{
+cursor: pointer;
+}
+div.forward_arrow span, div.back_arrow span{
+font-size: 2.5rem;
+}
+div#main{
+    grid-column: 2 / 4;
+}
 
 section.index_features{
     margin: auto;
@@ -204,19 +219,12 @@ section.about div.first_half_about div.selections div a:link , section.about div
     color: var(--red-shade);
     transition-duration: 0.3s;
 }
-section.about div.selection_table div.graphics, section.about div.selection_table div.web_coding{
-    display: none;
-}
 div.second_half_about p:nth-child(1){
     font-family: var(--secondary-font);
     font-size: 2.6rem;
 }
-.show{
-display: block;
-}
-.hide{
-    display: none;
-}
+
+
 
 div.first_half_about{
     max-width: 40%;
@@ -235,8 +243,12 @@ div.second_half_about div#discover_index{
 div.selection_table div.data{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
+    transition-duration: 0.3;
+    transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-duration: 1s;
+    animation-name: slide;
 }
+
 
 p.table_heading{
     font-family: var(--secondary-font);
@@ -244,6 +256,20 @@ p.table_heading{
 p.table_edge{
     font-family: var(--secondary-font);
     color: var(--green-shade);
+}
+
+div.hide{
+    display: none  !important;
+}
+@keyframes slide {
+    0%{
+        transform: translate(-10px, 0);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px, 0px);
+        opacity: 100%;
+    }
 }
 
 section.financialPlan{
