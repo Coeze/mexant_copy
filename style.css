@@ -12,6 +12,9 @@ font-family: 'Patrick Hand', cursive;
 
 font-family: 'Poppins', sans-serif; */
 
+.js .accordion:nth-child(n+1) { 
+    display: none
+ }
 html { 
     scroll-behavior: smooth;
  }

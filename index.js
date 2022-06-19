@@ -17,7 +17,7 @@ const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");
 const currIdx = urls.indexOf(url)
 const newIdx = (currIdx + 1) % urls.length
 Header.style.backgroundImage = `url(${urls[newIdx]})`
-Header.style.transition = "all 1s";
+Header.style.transition = "all 2s";
 
 })
 
@@ -26,6 +26,7 @@ backArrow.addEventListener("click", () => {
     const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");  
     const currIdx = urls.indexOf(url)
     const newIdx = Math.abs((currIdx - 1) % urls.length)
+    Header.style.transition = "all 2s";
     Header.style.backgroundImage = `url(${urls[newIdx]})`
     
     })
