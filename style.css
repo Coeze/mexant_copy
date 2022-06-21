@@ -12,9 +12,7 @@ font-family: 'Patrick Hand', cursive;
 
 font-family: 'Poppins', sans-serif; */
 
-.js .accordion:nth-child(n+1) { 
-    display: none
- }
+
 html { 
     scroll-behavior: smooth;
  }
@@ -42,6 +40,10 @@ color: white;
 margin-bottom: 50px;
 
 }
+nav.hamburger_nav{
+    display: none;
+
+}
 
 nav.index_nav div a{
     color: white;
@@ -65,7 +67,73 @@ div.contact_button button{
 
     border-radius: 5px;
 }
+div.flex_nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+}
+div.flex_nav > *{
+    margin: 0;
+    
+}
+
+ul#hamburger_ul{
+   margin-right: 25px;
+  
+}
+ul#hamburger_ul > *{
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    width: 100%;
+    cursor: pointer;
+    list-style-type: none; 
+    text-align: center;
+}
+ul#hamburger_ul div a{
+    color: black;
+    text-decoration: none;
+}
+ul#hamburger_ul div a:hover{
+     color: var(--red-shade);
+     transition: all 0.3s;
+}
+ul#hamburger_ul > *:hover{
+    background-color:rgba(245, 245, 245, 0.788) ;
+    transition: all 0.3s
+}
+div.hamburger{
+    width: 50px;
+    cursor: pointer;
+}
+div.lines{
+    border: 5px solid whitesmoke;
+    margin-bottom: 5px;
+    
+}
+ul.notshown{
+    display: none;
+}
+ul.shown{
+    width:100%;
+    display: block;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+div.rotat div:nth-child(1){
+    transform: rotate(45deg) translate(10px, 10px);
+    transition-duration: 0.5s;
+}
+div.rotat div:nth-child(3){
+    transform: rotate(-45deg) ;
+    transition-duration: 0.5s;
+    
+}
+
+div.rotat div:nth-child(2){
+    display: none;
+}
 div.logo_div img{
     max-width: 100%;
     display: block;
@@ -84,7 +152,9 @@ header.index_header{
     background-size: cover;
     width: 100%;
     height: min-content;
-    padding: 50px 0;
+    padding:20px 20px 50px 20px;
+  
+  
 
 }
 header.index_header div.header_index_bottom_half{
@@ -95,8 +165,8 @@ header.index_header div.header_index_bottom_half{
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
 }
-header.index_header div.header_index_bottom_half div#index_heading_text{
-    font-size: 3.5rem;
+header.index_header div.header_index_bottom_half div.index_heading_text{
+    font-size: 3rem;
     font-family: var(--secondary-font);
 }
 hr{
@@ -114,7 +184,7 @@ div.buttons{
     margin-top: 20px;
 }
 div.buttons button{
-    width: 200px;
+    min-width: 200px;
     height: 50px;
     display: block;
     border: none;
@@ -238,18 +308,25 @@ div.second_half_about p:nth-child(1){
 
 
 div.first_half_about{
-    max-width: 40%;
-}
-div.second_half_about{
-    max-width: 30%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+}
+div.second_half_about{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
     height: 100%;
+    padding: 0 20px;
 }
 div.second_half_about div#discover_index{
     margin-top: 30px;
+}
+div.selection_table{
+    width: 80%;
 }
 div.selection_table div.data{
     display: grid;
@@ -260,7 +337,9 @@ div.selection_table div.data{
     animation-name: slide;
 }
 
-
+div.selection_table div.data p{
+    margin: 10px;
+}
 p.table_heading{
     font-family: var(--secondary-font);
 }
@@ -288,7 +367,8 @@ section.financialPlan{
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    height: 120vh;
+    padding: 50px;
+    height: min-content;
     background-image: url(./media/images/woman_background.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -372,6 +452,8 @@ section.testiomonals{
     align-items: center;
     justify-content: space-around;
     padding: 50px;
+    height: min-content;
+    width: 100%;
 }
 
 section.testiomonals div.top_text p {
@@ -390,6 +472,11 @@ div.test_box{
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    height: min-content;
+        box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 15px 0px ;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding-left: 40px;
 }
 div.quot span{
     background-color: var(--green-shade);
@@ -409,12 +496,7 @@ footer.index_footer{
     padding: 5px 0;
     text-align: center;
 }
-div.test_box{
-    box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 15px 0px ;
-    border-radius: 10px;
-    margin-top: 40px;
-    padding-left: 40px;
-}
+
 div.first_half{
     display: flex;
     flex-direction: column;
@@ -436,4 +518,92 @@ div.ceo_name p:nth-child(2){
     font-family: var(--secondary-font);
     color: var(--green-shade);
     
+}
+
+@media only screen and (max-width: 1200px){
+    div.woman_img{
+        display: none;
+    }
+  
+  
+}
+
+@media only screen and (max-width:900px){
+    section.testiomonals{
+        display: none;
+    }
+    nav.index_nav{
+        display: none;
+    }
+    header.index_header{
+        padding: 0 0 50px 0;
+    }
+    nav.hamburger_nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+    }
+
+    section.index_banner{
+        flex-direction: column; 
+        align-items: space-around;
+        justify-content: center;
+     }
+     section.index_banner div:nth-child(1){
+         font-size: 2.5rem;
+         text-align: center;
+     }
+     section.index_features{
+        grid-template-columns: 1fr;
+    }
+}
+@media only screen and (max-width: 600px){
+    div.header_index_bottom_half{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+  div#main{
+    width: 100%;
+ 
+  }
+  
+  header.index_header div.header_index_bottom_half div.index_heading_text{
+    font-size: 2.2rem;
+  }
+  div#header_buttons{
+    
+    margin-left:50px;
+  }
+    div#it{
+        display: none;
+    }
+ 
+
+
+ 
+    section.about{
+        flex-direction: column;
+        align-items: space-around;
+        justify-content: center;
+    }
+    section.about > *{
+        width: 100%;
+    }
+    form.financial_form{
+        grid-template-columns: 1fr;
+    }
+    form.financial_form div{
+        
+        grid-column: 1 / 2;
+    }
+    form.financial_form div > *{
+        width: 90vw;
+
+    }
+  
+
 }

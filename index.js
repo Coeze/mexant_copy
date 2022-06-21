@@ -7,7 +7,18 @@ const GraphicsButton = document.querySelector("div#gr")
 const forwardArrow = document.querySelector("div.forward_arrow")
 const backArrow = document.querySelector("div.back_arrow")
 const Header = document.querySelector(".index_header")
+let ul = document.querySelector('ul#hamburger_ul')
+let hamburger = document.querySelector('.hamburger')
 
+
+
+
+
+
+hamburger.addEventListener("click", () => {
+    ul.classList.toggle('shown')
+    hamburger.classList.toggle('rotat')
+})
 
 const urls = ["http://127.0.0.1:5500/media/images/main_background.jpg", 'http://127.0.0.1:5500/media/images/slide2.jpg', 'http://127.0.0.1:5500/media/images/slide3.jpg']
 
