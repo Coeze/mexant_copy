@@ -20,11 +20,11 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle('rotat')
 })
 
-const urls = ["http://127.0.0.1:5500/media/images/main_background.jpg", 'http://127.0.0.1:5500/media/images/slide2.jpg', 'http://127.0.0.1:5500/media/images/slide3.jpg']
+const urls = ["./media/images/main_background.jpg", './media/images/slide2.jpg', './media/images/slide3.jpg']
 
 forwardArrow.addEventListener("click", () => { 
-const style = window.getComputedStyle(Header, false)  
-const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");  
+const style = window.getComputedStyle(Header, false) 
+const url = `.${style.backgroundImage.slice(26, -1).replace(/"/g, "")}`; 
 const currIdx = urls.indexOf(url)
 const newIdx = (currIdx + 1) % urls.length
 Header.style.backgroundImage = `url(${urls[newIdx]})`
@@ -34,7 +34,7 @@ Header.style.transition = "all 2s";
 
 backArrow.addEventListener("click", () => { 
     const style = window.getComputedStyle(Header, false)  
-    const url = style.backgroundImage.slice(4, -1).replace(/"/g, "");  
+    const url = `.${style.backgroundImage.slice(26, -1).replace(/"/g, "")}`;  
     const currIdx = urls.indexOf(url)
     const newIdx = Math.abs((currIdx - 1) % urls.length)
     Header.style.transition = "all 2s";

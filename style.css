@@ -104,16 +104,24 @@ ul#hamburger_ul > *:hover{
     transition: all 0.3s
 }
 div.hamburger{
-    width: 50px;
+    width: 40px;
     cursor: pointer;
 }
 div.lines{
-    border: 5px solid whitesmoke;
+    border: 1.5px solid whitesmoke;
     margin-bottom: 5px;
     
 }
+div.lines:nth-child(3){
+    width: 50%;
+}
 ul.notshown{
     display: none;
+}
+button a{
+    color: white;
+    font-family: var(--secondary-font);
+    text-decoration: none;
 }
 ul.shown{
     width:100%;
@@ -122,12 +130,13 @@ ul.shown{
     margin-bottom: 15px;
 }
 div.rotat div:nth-child(1){
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(5px, 5px);
     transition-duration: 0.5s;
 }
 div.rotat div:nth-child(3){
     transform: rotate(-45deg) ;
     transition-duration: 0.5s;
+    width: 100%;
     
 }
 
@@ -317,8 +326,8 @@ div.second_half_about{
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: space-around;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
     padding: 0 20px;
 }
@@ -331,7 +340,7 @@ div.selection_table{
 div.selection_table div.data{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    transition-duration: 0.3;
+    transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
     animation-duration: 1s;
     animation-name: slide;
@@ -450,7 +459,7 @@ section.testiomonals{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     padding: 50px;
     height: min-content;
     width: 100%;
@@ -469,11 +478,10 @@ text-align: center;
 
 div.test_box{
     display: flex;
-    justify-content: space-around;
     align-items: center;
     width: 80%;
     height: min-content;
-        box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 15px 0px ;
+    box-shadow:rgba(0, 0, 0, 0.1) 0px 0px 15px 0px ;
     border-radius: 10px;
     margin-top: 40px;
     padding-left: 40px;
@@ -500,7 +508,7 @@ footer.index_footer{
 div.first_half{
     display: flex;
     flex-direction: column;
-    align-items: space-around;
+    align-items: flex-start;
     justify-content: center;
     max-width: 70%;
 }
@@ -548,8 +556,8 @@ div.ceo_name p:nth-child(2){
 
     section.index_banner{
         flex-direction: column; 
-        align-items: space-around;
-        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
      }
      section.index_banner div:nth-child(1){
          font-size: 2.5rem;
@@ -587,8 +595,8 @@ div.ceo_name p:nth-child(2){
  
     section.about{
         flex-direction: column;
-        align-items: space-around;
-        justify-content: center;
+        align-items:center;
+        justify-content: space-around;
     }
     section.about > *{
         width: 100%;
