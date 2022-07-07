@@ -9,10 +9,90 @@ const backArrow = document.querySelector("div.back_arrow")
 const Header = document.querySelector(".index_header")
 let ul = document.querySelector('ul#hamburger_ul')
 let hamburger = document.querySelector('.hamburger')
+const pages_child1 = document.querySelector('div#servicese')
+const pages_child2 = document.querySelector('div#contactUs')
+const page = document.querySelector('div#expand')
+const anchor1 = document.querySelector('div#servicese a')
+const anchor2 = document.querySelector('div#contactUs a')
 
 
 
+page.addEventListener("mouseenter", () => {
+    
+        pages_child1.style.visibility = "visible";
+        pages_child1.style.transition = "all 0.5s"
+        pages_child2.style.visibility = "visible";
+        pages_child2.style.transition = "all 0.5s"
+    
+    
+})
+anchor1.addEventListener("mouseenter", () => {
+    
+    pages_child1.style.visibility = "visible";
+    
+    pages_child2.style.visibility = "visible";
 
+
+})
+anchor2.addEventListener("mouseenter", () => {
+    
+    pages_child1.style.visibility = "visible";
+    
+    pages_child2.style.visibility = "visible";
+
+
+})
+anchor1.addEventListener("mouseout", () => {
+    
+    pages_child1.style.visibility = "hidden";
+    
+    pages_child2.style.visibility = "hidden";
+
+
+})
+anchor2.addEventListener("mouseout", () => {
+    
+    pages_child1.style.visibility = "hidden";
+    
+    pages_child2.style.visibility = "hidden";
+
+
+})
+pages_child1.addEventListener("mouseenter", () => {
+    
+    pages_child1.style.visibility = "visible";
+    
+    pages_child2.style.visibility = "visible";
+
+
+})
+pages_child2.addEventListener("mouseenter", () => {
+    
+    pages_child1.style.visibility = "visible";
+    
+    pages_child2.style.visibility = "visible";
+
+
+})
+page.addEventListener("mouseout", () => {
+    pages_child1.style.visibility = "hidden";
+        
+    pages_child2.style.visibility = "hidden";
+    
+})
+    
+pages_child1.addEventListener("mouseout", () => {
+    pages_child1.style.visibility = "hidden";
+        
+    pages_child2.style.visibility = "hidden";
+    
+})
+pages_child2.addEventListener("mouseout", () => {
+    pages_child1.style.visibility = "hidden";
+        
+    pages_child2.style.visibility = "hidden";
+    
+})
 
 
 hamburger.addEventListener("click", () => {
@@ -36,7 +116,7 @@ backArrow.addEventListener("click", () => {
     const style = window.getComputedStyle(Header, false)  
     const url = `.${style.backgroundImage.slice(26, -1).replace(/"/g, "")}`;  
     const currIdx = urls.indexOf(url)
-    const newIdx = Math.abs((currIdx - 1) % urls.length)
+    const newIdx = Math.abs((currIdx - 1)) % urls.length
     Header.style.transition = "all 2s";
     Header.style.backgroundImage = `url(${urls[newIdx]})`
     

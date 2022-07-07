@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Blaka+Hollow&family=Dancing+Script&family=Fredoka:wght@600&family=Neonderthaw&family=Pacifico&family=Patrick+Hand&family=Poppins:wght@200&display=swap"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+        />
+        <title>Document</title>
+      </head>
+<body>
+    
+    <header class="services_header">
+        <nav class="index_nav services_nav">
+          <div class="logo_div">
+            <img src="./media/images/logo.png" alt="logo" />
+          </div>
+          <div class="home"><a href="./index.html">Home</div>
+          <div class="services"><a href="#services">Services</a></div>
+          <div class="about"><a href="#aboutus">About</a></div>
+          <div class="pages services_pages">
+            <div id="expand">
+              <span id="ex" class="material-symbols-outlined">expand_more</span>
+              <span id="pn_span">Pages</span>
+            </div>
+            <div id="servicese" class="hidden">
+              <a href="./services.html">Our Services</a>
+            </div>
+            <div id="contactUs" class="hidden">
+              <a href="./contact.html">Contact Us</a>
+            </div>
+          </div>
+          <div class="testimonials"><a href="#testimonial">Testimonials</a></div>
+          <div class="contact_button">
+            <button><a href="#contact">Contact Support</a></button>
+          </div>
+        </nav>
+        <div class="flex_nav">
+          <nav class="hamburger_nav">
+            <div class="logo_div">
+              <img src="./media/images/logo.png" alt="logo" />
+            </div>
+            <div class="hamburger">
+              <div class="lines"></div>
+              <div class="lines"></div>
+              <div class="lines"></div>
+            </div>
+          </nav>
+  
+          <ul id="hamburger_ul" class="notshown">
+            <div class="home">Home</div>
+            <div class="services"><a href="#services">Services</a></div>
+            <div class="about"><a href="#aboutus">About</a></div>
+            <div class="pages pages_services">
+              <span>Pages</span>
+              <span id="services" class="hidden">Our Services</span>
+              <span id="contact-us" class="hidden">Contact Us</span>
+            </div>
+          </ul>
+        </div>
+  
+        <p class="services_header_text">Contact</p>
+  
+        <hr id="services_hr" />
+      </header>
+  
+
+      <section class="google_map_iframe">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26362656.825778108!2d-113.78245606526528!3d36.23711918755778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2ssa!4v1657191991449!5m2!1sen!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="contact_info">
+            <div class="contact_info_box">
+                <span class="material-symbols-outlined">
+                    call
+                    </span>
+                <p class="contact_info_title">
+                    Lorem, ipsum.
+                </p>
+                <p class="contact_info_text">Lorem.</p>
+            </div>
+            <div class="contact_info_box">
+                <span class="material-symbols-outlined">
+                    mail
+                    </span>
+                <p class="contact_info_title">
+                  Lorem, ipsum.
+                </p>
+                <p class="contact_info_text">Lorem.</p>
+            </div>
+            <div class="contact_info_box">
+                <span class="material-symbols-outlined">
+                    map
+                    </span>
+                <p class="contact_info_title">
+                    Lorem, ipsum.
+                </p>
+                <p class="contact_info_text">Lorem.</p>
+            </div>
+        </div>
+      </section>
+
+      <section class="main_contact_page_contact_form">
+        <div>
+            <p class="orange_contact_text">Contact Us</p>
+            <p id="feel_free">Feel Free To Message Us</p>
+        </div>
+
+        <form action="" class="contact_form_grid_contact-page">
+            <input type="text" placeholder="Your Name">
+            <input type="tel" placeholder="Mobile Number">
+            <input type="email" placeholder="Your Email">
+            <input type="text" placeholder="Subject">
+            <textarea name="contact_message" id="contact-message-textarea" placeholder="Your Message"></textarea>
+            <button type="submit" id="contact-page-submit_button">Send Message</button>
+        </form>
+      </section>
+      <footer class="index_footer">
+        <p>Copyright &copy; 2022 Lorem ipsum dolor sit amet. </p>
+        <p>Designed by Lorem, ipsum.</p>
+      </footer>
+      <script src="./index.js"></script>
+</body>
+</html>
