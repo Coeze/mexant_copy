@@ -627,7 +627,12 @@ section.services_outlined article.service{
     gap:0;
     margin-bottom: 50px;
 }
-
+section.services_outlined article.service img{
+    display: block;
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
 div.service_span_div span{
     color: var(--green-shade);
     background-color:rgb(236, 248, 242);
@@ -645,6 +650,10 @@ p.service_details{
 }
 img.service-img{
     display: block;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 div.service_details_div{
     display: grid;
@@ -854,4 +863,59 @@ button#contact-page-submit_button:hover{
     }
   
 
+}
+
+/* Contact Page Responsive */
+
+@media only screen and (max-width:900px){
+    div.contact_info{
+        margin-top: 0px;
+        padding-top:50px;
+        flex-direction: column;
+
+    }
+    div.contact_info div.contact_info_box{
+width: 80%;
+margin: 10px 0;
+    }
+    form.contact_form_grid_contact-page{
+        grid-template-columns: 1fr;
+    }
+    textarea#contact-message-textarea{
+        grid-column: 1 / 2;
+    }
+}
+
+/* Services Responsive */
+@media only screen and (max-width:900px){
+    section.services_outlined article.service{
+        grid-template-columns: 1fr;
+        margin: auto;
+    }
+    div.service_details_div{
+        grid-template-columns: 1fr;
+        place-items: center;
+        text-align: center;
+        
+    }
+    article.service img{
+        width: 90%;
+        margin: auto;
+    }
+    div.service_span_div{
+        margin-top: 30px;
+        text-align: center;
+    }
+    p.service_title{
+        text-align: center;
+    }
+    p.service_details{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    div.service_details_div > *{
+        width: 80%;
+    }
 }
