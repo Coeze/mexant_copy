@@ -530,7 +530,7 @@ div.pages{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 100px;
+    margin-top: 120px;
 }
 span#pn_span{
     background: transparent;
@@ -557,20 +557,21 @@ div.pages span:hover{
 .hidden{
     visibility: hidden;
 }
-div#servicese, div#contactUs{
+div#servicese, div#contactUs, div#abouts{
     background-color: white;
     color: black;
     width: 120px;
-    height: 50px;
+    height: 40px;
+    margin: 0;
     display: grid;
     place-items: center;
     text-align: center;
     cursor: pointer;
 }
-div#servicese a, div#contactUs a {
+div#servicese a, div#contactUs a, div#abouts a {
     color: black;
 }
-div#servicese a:hover, div#contactUs a:hover{
+div#servicese a:hover, div#contactUs a:hover, div#abouts a:hover{
     color: var(--red-shade);
     transition: all 0.2s;
 }
@@ -774,6 +775,130 @@ button#contact-page-submit_button:hover{
     background-color: var(--green-shade);
     transition: all 0.2s;
 }
+
+
+/* About Page */
+
+section.toggle_down_section{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 0px 50px ;
+    padding: 50px 0;
+}
+section.toggle_down_section img{
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: auto;
+    border-radius: 10px;
+}
+
+section.toggle_down_section div.actual_toggle{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 0px;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+div.div.actual_toggle div{
+    width: min-content;
+}
+div.toggle_text{
+    display: flex;
+    flex-direction: column;
+}
+p.toggle_text_hidden{
+    display: none;
+}
+
+.green_shade_text_about_toggle{
+    color: var(--green-shade);
+}
+.about_span_rotate{
+    transform: rotate(90deg);
+    transition-duration: 0.2s;
+    color: var(--green-shade);
+
+}
+div.span_toggle span{
+    cursor: pointer;
+}
+div.toggle_text p:nth-child(1){
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+    white-space: nowrap;
+}
+
+section.toggle_down_section div.actual_toggle div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+main.about_us_section{
+    width: 80%;
+    margin: auto;
+    height: min-content;
+    padding:50px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 40px;
+}
+p.about_head{
+    font-size: 1.8rem;
+    font-family:var(--secondary-font);
+}
+div.about_info_data{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+div.about_button_learn button{
+    background-color: var(--green-shade);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+div.main_about_info_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    
+}
+div.main_about_info_grid div.about_info_grid{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 15px 0px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+
+div.main_about_info_grid div.about_info_grid p:nth-child(1){
+    white-space: nowrap;
+    font-family: var(--secondary-font);
+    font-size: 1.3rem;
+}
+div.main_about_info_grid div.about_info_grid p:nth-child(3){
+    grid-column: 1 /  span 2;
+
+}
+p#about_number{
+    justify-self: flex-end;
+    color: var(--green-shade);
+    font-size: 2rem;
+    font-family: var(--secondary-font);
+}
+
+p#about_number:hover{
+    transition: all 0.2s;
+    transform: translateY(5px);
+}
+
 /* Home Page Responsive  */
 
 
@@ -864,6 +989,25 @@ button#contact-page-submit_button:hover{
   
 
 }
+
+/* About Page Responsive */
+
+@media only screen and (max-width:900px){
+    section.toggle_down_section{
+        grid-template-columns: 1fr;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    main.about_us_section{
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    div.main_about_info_grid{
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Contact Page Responsive */
 

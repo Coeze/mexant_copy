@@ -11,9 +11,11 @@ let ul = document.querySelector('ul#hamburger_ul')
 let hamburger = document.querySelector('.hamburger')
 const pages_child1 = document.querySelector('div#servicese')
 const pages_child2 = document.querySelector('div#contactUs')
+const pages_child3 = document.querySelector("div#abouts")
 const page = document.querySelector('div#expand')
 const anchor1 = document.querySelector('div#servicese a')
 const anchor2 = document.querySelector('div#contactUs a')
+const anchor3 = document.querySelector("div#abouts a")
 
 
 page.addEventListener("mouseenter", () => {
@@ -22,6 +24,8 @@ page.addEventListener("mouseenter", () => {
     pages_child1.style.transition = "all 0.5s"
     pages_child2.style.visibility = "visible";
     pages_child2.style.transition = "all 0.5s"
+    pages_child3.style.visibility = "visible";
+    pages_child3.style.transition = "all 0.5s"
 
 
 })
@@ -31,6 +35,8 @@ pages_child1.style.visibility = "visible";
 
 pages_child2.style.visibility = "visible";
 
+pages_child3.style.visibility = "visible";
+
 
 })
 anchor2.addEventListener("mouseenter", () => {
@@ -38,6 +44,8 @@ anchor2.addEventListener("mouseenter", () => {
 pages_child1.style.visibility = "visible";
 
 pages_child2.style.visibility = "visible";
+
+pages_child3.style.visibility = "visible";
 
 
 })
@@ -47,6 +55,8 @@ pages_child1.style.visibility = "hidden";
 
 pages_child2.style.visibility = "hidden";
 
+pages_child3.style.visibility = "hidden";
+
 
 })
 anchor2.addEventListener("mouseout", () => {
@@ -54,6 +64,20 @@ anchor2.addEventListener("mouseout", () => {
 pages_child1.style.visibility = "hidden";
 
 pages_child2.style.visibility = "hidden";
+
+pages_child3.style.visibility = "hidden";
+
+
+
+})
+anchor3.addEventListener("mouseout", () => {
+
+pages_child1.style.visibility = "hidden";
+
+pages_child2.style.visibility = "hidden";
+
+pages_child3.style.visibility = "hidden";
+
 
 
 })
@@ -63,6 +87,8 @@ pages_child1.style.visibility = "visible";
 
 pages_child2.style.visibility = "visible";
 
+pages_child3.style.visibility = "visible";
+
 
 })
 pages_child2.addEventListener("mouseenter", () => {
@@ -71,12 +97,27 @@ pages_child1.style.visibility = "visible";
 
 pages_child2.style.visibility = "visible";
 
+pages_child3.style.visibility = "visible";
+
+
+})
+pages_child3.addEventListener("mouseenter", () => {
+
+pages_child1.style.visibility = "visible";
+
+pages_child2.style.visibility = "visible";
+
+pages_child3.style.visibility = "visible";
+
+
 
 })
 page.addEventListener("mouseout", () => {
 pages_child1.style.visibility = "hidden";
     
 pages_child2.style.visibility = "hidden";
+
+pages_child3.style.visibility = "hidden";
 
 })
 
@@ -85,11 +126,15 @@ pages_child1.style.visibility = "hidden";
     
 pages_child2.style.visibility = "hidden";
 
+pages_child3.style.visibility = "hidden";
+
 })
 pages_child2.addEventListener("mouseout", () => {
 pages_child1.style.visibility = "hidden";
     
 pages_child2.style.visibility = "hidden";
+
+pages_child3.style.visibility = "hidden";
 
 })
 
