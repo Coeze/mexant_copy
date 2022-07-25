@@ -590,6 +590,69 @@ div.ceo_name p:nth-child(2){
     
 }
 
+div.contact_support_popup{
+    position: fixed;
+    box-shadow: rgb(8, 8, 8) 0px 0px 15px 0px;
+    right: 0;
+    bottom: 10px;
+    padding: 30px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    visibility: hidden;
+    
+}
+
+div.contact_support_popup form{
+    display: grid;
+    row-gap: 20px;
+}
+button#popup_btn{
+    background-color: bisque;
+    width: 30%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    padding: 5px 0;
+    
+}
+button#popup_btn:hover{
+    background-color: rgb(228, 162, 82);
+    transition: all 1s;
+}
+@keyframes popup {
+    0%{
+        width: 5%;
+        height: 15%;
+    }
+    100%{
+        width: 30%;
+        height: 60%;
+    }
+    
+}
+.pop{
+    animation-name: popup;
+    animation-duration: 0.2s;
+}
+
+span#close_popup:hover{
+background-color: red;
+cursor: pointer;
+transition: all 0.2s;
+padding: 0 10px;
+}
+
+div.contact_support_popup form input, div.contact_support_popup form textarea{
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+div.contact_support_popup form p{
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 1.6rem;
+}
 
 
 
@@ -899,6 +962,8 @@ p#about_number:hover{
     transform: translateY(5px);
 }
 
+
+
 /* Home Page Responsive  */
 
 
@@ -906,7 +971,6 @@ p#about_number:hover{
     div.woman_img{
         display: none;
     }
-  
   
 }
 
@@ -927,6 +991,7 @@ p#about_number:hover{
         background-color: rgba(0, 0, 0, 0.5);
         width: 100vw;
     }
+
 
     section.index_banner{
         flex-direction: column; 
@@ -954,7 +1019,7 @@ p#about_number:hover{
   }
   
   header.index_header div.header_index_bottom_half div.index_heading_text{
-    font-size: 2.2rem;
+    font-size: 2.0rem;
   }
   div#header_buttons{
     
