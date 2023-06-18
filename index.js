@@ -20,6 +20,73 @@ const popup = document.querySelector("div.contact_support_popup")
 const contactSupportBtn = document.querySelector("div.contact_button button")
 const closePopUpBtn = document.querySelector("span#close_popup")
 
+const blogGraphicsButton = document.querySelector("div#blogs_gr");
+const blogWebDesignButton = document.querySelector("div#blogs_wd");
+const blogWebCodingButton = document.querySelector("div#blogs_wc");
+
+const bd1 = document.querySelector("div#bd1")
+const bd2 = document.querySelector("div#bd2")
+const bd3 = document.querySelector("div#bd3")
+
+
+blogWebDesignButton.addEventListener("click", () => {
+    blogWebCodingButton.classList.remove("coloured")
+    blogGraphicsButton.classList.remove("coloured")
+    if (bd1.classList.contains("hide")){
+        bd1.classList.remove("hide");
+
+    }
+    
+    if (!bd2.classList.contains("hide")){
+        bd2.classList.add("hide");
+    }
+
+    if (!bd3.classList.contains("hide")){
+        bd3.classList.add("hide");
+    }
+
+    blogWebDesignButton.classList.add("coloured")
+   
+})
+blogGraphicsButton.addEventListener("click", () => {
+    blogWebDesignButton.classList.remove("coloured")
+    blogWebCodingButton.classList.remove("coloured")
+    if (bd2.classList.contains("hide")){
+        bd2.classList.remove("hide");
+    }
+
+    if (!bd1.classList.contains("hide")){
+        bd1.classList.add("hide");
+    }
+
+    if (!bd3.classList.contains("hide")){
+        bd3.classList.add("hide");
+    }
+
+    blogGraphicsButton.classList.add("coloured")
+   
+})
+blogWebCodingButton.addEventListener("click", () => {
+    blogGraphicsButton.classList.remove("coloured")
+    blogWebDesignButton.classList.remove("coloured")
+
+    if (bd3.classList.contains("hide")){
+        bd3.classList.remove("hide");
+    }
+
+    if (!bd2.classList.contains("hide")){
+        bd2.classList.add("hide");
+    }
+
+    if (!bd1.classList.contains("hide")){
+        bd1.classList.add("hide");
+    }
+
+    blogWebCodingButton.classList.add("coloured")
+   
+})
+
+
 closePopUpBtn.addEventListener("click" , () => {
     popup.style.visibility = "hidden";
 })
@@ -37,7 +104,7 @@ popup.style.visibility = "hidden"
 page.addEventListener("mouseenter", () => {
     
         pages_child1.style.visibility = "visible";
-        pages_child1.style.transition = "all 0.5s"
+        pages_child1.style.transition = "all 0.5s";
         pages_child2.style.visibility = "visible";
         pages_child2.style.transition = "all 0.5s"
         pages_child3.style.visibility = "visible";
@@ -158,6 +225,7 @@ pages_child2.addEventListener("mouseout", () => {
 hamburger.addEventListener("click", () => {
     ul.classList.toggle('shown')
     hamburger.classList.toggle('rotat')
+    
 })
 
 const urls = ["./media/images/main_background.jpg", './media/images/slide2.jpg', './media/images/slide3.jpg']
@@ -217,4 +285,7 @@ webCodingButton.addEventListener("click", () => {
     }
 
 })
+
+
+
 
