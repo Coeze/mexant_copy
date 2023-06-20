@@ -2,6 +2,16 @@ const spans = document.querySelectorAll("div.span_toggle span");
 const texts = document.querySelectorAll("p.toggle_text_hidden");
 const largerTxts = document.querySelectorAll("div.actual_toggle p.isolate");
 const popup = document.querySelector("div.contact_support_popup")
+const ul = document.querySelector("ul#hamburger_ul")
+const hamburger = document.querySelector("div.hamburger")
+
+hamburger.addEventListener("click", () => {
+    ul.classList.toggle('shown')
+    hamburger.classList.toggle('rotat')
+    
+})
+
+
 // const contactSupportBtn = document.querySelector("div.contact_button button")
 // const closePopUpBtn = document.querySelector("span#close_popup")
 // const pages_child1 = document.querySelector('div#servicese')
