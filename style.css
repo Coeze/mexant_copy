@@ -298,10 +298,14 @@ div.icon span:hover{
 section.index_banner{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url(./media/images/banner_two_buttons.jpg);
-    height: 40vh;
-    padding: 0 40px;
+    height: min-content;
+    padding: 40px;
+}
+section.index_banner div:nth-child(1){
+    width: 80%;
+    margin: auto;
 }
 section.index_banner div#welcome_title{
     font-family: var(--secondary-font);
@@ -1179,6 +1183,13 @@ div.articles_grid{
     font-family: var(--secondary-font);
     margin-bottom: 20px;
 }
+
+input#donate_input_price{
+    width: 100px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    
+}
 /* Home Page Responsive  */
 
 
@@ -1203,11 +1214,14 @@ div.articles_grid{
         justify-content: space-around;
      }
      section.index_banner div:nth-child(1){
-         font-size: 2.5rem;
          text-align: center;
      }
      section.index_features{
         grid-template-columns: 1fr;
+    }
+    section.contact_donate{
+        grid-template-columns: 1fr;
+        gap: 20px 0;
     }
 }
 @media only screen and (max-width: 600px){
