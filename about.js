@@ -2,8 +2,13 @@ const spans = document.querySelectorAll("div.span_toggle span");
 const texts = document.querySelectorAll("p.toggle_text_hidden");
 const largerTxts = document.querySelectorAll("div.actual_toggle p.isolate");
 const popup = document.querySelector("div.contact_support_popup")
+<<<<<<< HEAD
 const ul = document.querySelector("ul#hamburger_ul")
 const hamburger = document.querySelector("div.hamburger")
+=======
+const contactSupportBtn = document.querySelector("div.contact_button button")
+const closePopUpBtn = document.querySelector("span#close_popup")
+>>>>>>> parent of d8f987b (fix about page bug)
 
 hamburger.addEventListener("click", () => {
     ul.classList.toggle('shown')
@@ -51,6 +56,7 @@ span.addEventListener("click", ()=>{
 
 })
 
+<<<<<<< HEAD
 
 
 // page.addEventListener("mouseenter", () => {
@@ -172,3 +178,5 @@ span.addEventListener("click", ()=>{
 // pages_child3.style.visibility = "hidden";
 
 // })
+=======
+>>>>>>> parent of d8f987b (fix about page bug)
