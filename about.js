@@ -8,6 +8,9 @@ const hamburger = document.querySelector("div.hamburger")
 =======
 const contactSupportBtn = document.querySelector("div.contact_button button")
 const closePopUpBtn = document.querySelector("span#close_popup")
+<<<<<<< HEAD
+>>>>>>> parent of d8f987b (fix about page bug)
+=======
 >>>>>>> parent of d8f987b (fix about page bug)
 
 hamburger.addEventListener("click", () => {
@@ -56,6 +59,7 @@ span.addEventListener("click", ()=>{
 
 })
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -178,5 +182,7 @@ span.addEventListener("click", ()=>{
 // pages_child3.style.visibility = "hidden";
 
 // })
+=======
+>>>>>>> parent of d8f987b (fix about page bug)
 =======
 >>>>>>> parent of d8f987b (fix about page bug)
