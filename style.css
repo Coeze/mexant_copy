@@ -42,8 +42,8 @@ margin-bottom: 50px;
 
 } */
 nav.hamburger_nav{
+    margin-top:0;
     display: none;
-
 }
 *{
     box-sizing: border-box;
@@ -161,7 +161,11 @@ button a{
 ul.shown{
     width:100%;
     display: block;
+    /* position: absolute;
+    left: 0;
+    top: 0px; */
     transition: all 0.3s;
+    margin-top: -25px;
     margin-bottom: 15px;
     z-index: 100;
 }
@@ -1230,6 +1234,7 @@ input#donate_input_price{
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-bottom: 0;
     }
 
         nav.hamburger_nav{
